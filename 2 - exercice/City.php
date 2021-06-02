@@ -25,7 +25,7 @@
         }
             
         public function showLocation(){
-            echo "La Ville de " . $this->nom . " est dans le département " . $this->departement .".";
+            return "La Ville de " . $this->nom . " est dans le département " . $this->departement .".";
         }
     }
 ?>

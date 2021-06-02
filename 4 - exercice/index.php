@@ -2,10 +2,10 @@
     require "Form.php";
 
     $form = new Form("");
-
-    $form->setTexte("name");
-
+    
+    $form->setText("name");
     $form->setSubmit("form", "envoyer");
-
     $form->showForm();
+
+    // var_dump($form);
 ?>
