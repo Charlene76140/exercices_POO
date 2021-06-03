@@ -21,8 +21,6 @@
             $this->peinture = $peinture; 
         }
 
-
-
         public function setPorte(int $porte){
             if(in_array($porte, self::PORTE)) {
                 $this->porte = $porte;
@@ -32,26 +30,29 @@
             }
         }
 
+        public function getPorte(){
+            return $this->porte;
+        }
+
         public function setPeinture(string $peinture){
             if(in_array($peinture, self::PEINTURE)){
                 $this->peinture = $peinture;
             }
             else {
-                throw new Exception("couleur de peinture incorrects");
+                throw new Exception("peinture incorrecte");
             }
-        }
-
-        public function getPorte(){
-            return $this->porte;
         }
 
         public function getPeinture() {
             return $this->peinture;
         }
-        
+
+        public static function setPrix(int $prix){
+            self::$prix = $prix;
+        }
+
         public static function getPrix (){
             return self::$prix;
         }
-        
     }
 ?>
